@@ -1,5 +1,4 @@
 import telebot
-from config import settings
 import requests
 import json
 import time
