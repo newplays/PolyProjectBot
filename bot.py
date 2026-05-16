@@ -37,15 +37,15 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 # Список актуальных бесплатных моделей на OpenRouter
 AVAILABLE_FREE_MODELS = [
-    "openrouter/openrouter/free",  
-    "tencent/hy3-preview:free",    
-    "openai/gpt-oss-120b:free",    
-    "google/gemma-4-31b-it:free",  
-    "nvidia/nemotron-3-super-120b-a12b:free",  
-    "qwen/qwen3-next-80b-a3b-instruct:free",   
-    "meta-llama/llama-3.3-70b-instruct:free",  
+    "openrouter/openrouter/free", 
+    "tencent/hy3-preview:free", 
+    "openai/gpt-oss-120b:free",  
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "qwen/qwen3-next-80b-a3b-instruct:free", 
+    "google/gemma-4-31b-it:free", 
+    "z-ai/glm-4.5-air:free", 
+    "minimax/minimax-m2.5:free",
 ]
-
 def ask_ai_with_retry(question, model_index=0):
     """Отправляет запрос к OpenRouter с автоматическим переключением между моделями"""
     if model_index >= len(AVAILABLE_FREE_MODELS):
